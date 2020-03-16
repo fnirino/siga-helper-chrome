@@ -38,7 +38,7 @@ let ProfessorsSearchCustomPage = function ($container, utils, apiConnector) {
 		$searchResultsDiv = $(`<div></div>`);
 		$searchResultsDiv.hide();
 		$searchResultsDiv.append("<hr><p>Resultados de busqueda:</p>");
-		let $searchResultsTable = $(`<table></table>`).append("<tbody></tbody>");
+		let $searchResultsTable = $(`<table class="sh"></table>`).append("<tbody></tbody>");
 		$searchResultsDiv.append($searchResultsTable);
 		$searchResultsTable.on("click", "a", function () {
 			let professorName = $(this).text();
@@ -90,7 +90,7 @@ let ProfessorsSearchCustomPage = function ($container, utils, apiConnector) {
 			}).join("");
 			$surveyResultDiv.append(`
 				<p>Puntaje general: ${utils.getOverallScoreSpan(results.overallScore)}</p>
-				<table class="percentage-questions">
+				<table class="sh percentage-questions">
 					<tbody>
 						<tr><th>Pregunta</th><th>Average</th><th>Sample size</th></tr>
 						${percetangeRows}
@@ -107,7 +107,7 @@ let ProfessorsSearchCustomPage = function ($container, utils, apiConnector) {
 			}).join("");
 			$surveyResultDiv.append(`
 				<p>Comentarios:</p>
-				<table class="text-questions" style="table-layout: fixed; width: 100%;">
+				<table class="sh text-questions" style="table-layout: fixed; width: 100%;">
 					<tbody>
 						<tr>${textQuestions.map(question => `<th>${question}</th>`).join("")}</tr>
 						<tr>${textColumns}</tr>

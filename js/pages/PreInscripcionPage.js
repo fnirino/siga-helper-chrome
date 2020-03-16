@@ -120,7 +120,7 @@ let PreInscripcionPage = function (pagesDataParser, utils) {
 		let $divContainer = $("<div style='display: inline-block;'>");
 
 		Object.keys(usedHours).forEach(alternativeIndex => {
-			let $table = $("<table>");
+			let $table = $(`<table class="sh">`);
 			let $tbody = $("<tbody>");
 
 			$table.append($tbody);

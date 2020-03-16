@@ -35,3 +35,10 @@ tr.top-border {
 tr.top-border-without-first-cell td:not(:first-child) {
 	border-top: 2px solid black;
 }
+
+/* All td's added by the siga helper should have their own background color */
+table.sh td,
+table tr.sh td,
+td.sh {
+	background-color: #efefef !important;
+}

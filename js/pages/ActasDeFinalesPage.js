@@ -7,7 +7,7 @@ let ActasDeFinalesPage = function (pagesDataParser, dataCollector, utils) {
 	let passingGradesAverage; // Only passing grades are considered here
 	let allGradesAverage; // Includes the failing grades.
 
-	let $helperTable = $("<div style='display:inline-block;'><table><tbody></tbody></table></div>");
+	let $helperTable = $(`<div style="display:inline-block;"><table class="sh"><tbody></tbody></table></div>`);
 
 	let $passingGradesTable = $(".std-canvas table:first");
 	let $failingGradesTable = $(".std-canvas table").length > 1 ? $(".std-canvas table:last") : $();
@@ -66,7 +66,7 @@ let ActasDeFinalesPage = function (pagesDataParser, dataCollector, utils) {
 
 	let addWeightedGradeColumn = function () {
 		let $bothTables = $passingGradesTable.add($failingGradesTable);
-		$bothTables.find("tr:not(:first)").append("<td></td>");
+		$bothTables.find("tr:not(:first)").append(`<td class="sh"></td>`);
 		$bothTables.find("tr:first").append("<th>Nota ponderada *</th>");
 	};
 

@@ -26,7 +26,7 @@ let CoursesSearchCustomPage = function ($container, utils, apiConnector) {
 		$searchResultsDiv = $(`<div></div>`);
 		$searchResultsDiv.hide();
 		$searchResultsDiv.append("<hr><p>Resultados de busqueda:</p>");
-		let $searchResultsTable = $(`<table></table>`).append("<tbody></tbody>");
+		let $searchResultsTable = $(`<table class="sh"></table>`).append("<tbody></tbody>");
 		$searchResultsDiv.append($searchResultsTable);
 		$searchResultsTable.on("click", "a", function () {
 			let courseCode = $(this).text();
@@ -38,7 +38,7 @@ let CoursesSearchCustomPage = function ($container, utils, apiConnector) {
 		$courseDataDiv = $(`<div></div>`);
 		$courseDataDiv.hide();
 		$courseDataDiv.append("<hr><p>Cursadas:</p>");
-		let $classesTable = $(`<table></table>`).append("<tbody></tbody>");
+		let $classesTable = $(`<table class="sh"></table>`).append("<tbody></tbody>");
 		$courseDataDiv.append($classesTable);
 		$container.append($courseDataDiv);
 		$container.append("<div><span class='powered-by-siga-helper'></span></div>");
